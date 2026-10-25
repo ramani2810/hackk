@@ -1,0 +1,22 @@
+{
+  "name": "coldchain-sentinel",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ColdChain Sentinel - tamper-evident IoT monitoring for pharmaceutical cold chains (educational prototype)",
+  "engines": { "node": ">=22.13.0" },
+  "scripts": {
+    "setup": "node scripts/setup.mjs",
+    "install:all": "npm install --prefix backend && npm install --prefix frontend",
+    "db:migrate": "npm run db:migrate --prefix backend",
+    "db:seed": "npm run db:seed --prefix backend",
+    "db:reset": "npm run db:reset --prefix backend",
+    "dev": "node scripts/dev.mjs",
+    "start:backend": "npm run start --prefix backend",
+    "start:frontend": "npm run dev --prefix frontend",
+    "build": "npm run build --prefix frontend",
+    "start:prod": "npm run build && node scripts/start-single.mjs",
+    "test": "npm run test --prefix backend",
+    "typecheck": "npm run typecheck --prefix backend && npm run typecheck --prefix frontend",
+    "check": "node scripts/check-node.mjs"
+  }
+}
